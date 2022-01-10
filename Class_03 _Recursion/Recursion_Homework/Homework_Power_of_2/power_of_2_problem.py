@@ -13,3 +13,16 @@
 
 # Input : n = 13
 # Output : False
+
+def powerOfTwo(n):
+    if n==2 or n==1:
+        return True
+    elif n < 2:
+        return False
+    else:
+        return powerOfTwo( n/2 )
+    
+print(powerOfTwo(4))
+print(powerOfTwo(5))
+print(powerOfTwo(64))
+print(powerOfTwo(1))
