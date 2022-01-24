@@ -7,3 +7,11 @@
 
 input_string = "ttbdisschoeee"
 indices = [7, 9, 3, 10, 4, 5, 0, 8, 11, 2, 12, 6, 1]
+
+def shuffle(string, ind):
+    new = ""
+    for i in ind:
+        new += input_string[i]
+    return new
+
+print(shuffle(input_string, indices))
