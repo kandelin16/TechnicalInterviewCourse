@@ -38,3 +38,33 @@ print(uncommonWords(sentence1, sentence2))
 
 # O(length of array 1 + length of array 2)
 # O(length of combined array)
+
+tups = [("akash", 10), ("gaurav", 12), ("anand", 14),
+  ("suraj", 20), ("akhil", 25), ("ashish", 30)]
+
+def tupToDict(tups):
+    out = {tup[0]:tup[1] for tup in tups}
+    return out
+
+print(tupToDict(tups))
+
+test_dict = {'B' : 4, 'Y' : 2, 'U' : 5}
+
+def dictReverse(d1):
+    d2 = {key:value for key, value in reversed(d1.items())}
+    return d2
+
+print(dictReverse(test_dict))
+
+test_dict = {'Nikhil' : {'English' : 5, 'Maths' :  2, 'Science' : 14},
+             'Akash' : {'English' : 15, 'Maths' :  7, 'Science' : 2},
+             'Akshat' : {'English' : 5, 'Maths' :  50, 'Science' : 20}}
+
+def subDictSort(d):
+    output = {}
+    min = 0
+    for subDict in d:
+        d[subDict] = {key:value for key, value in sorted(d[subDict].items(), key=lambda item: item[1], reverse=True)}
+    return d
+
+print(subDictSort(test_dict))
